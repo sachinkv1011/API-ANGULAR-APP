@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-x-12 col-xxl-12">
+            <div class="row g-3 mt-3">
+                <h1 class="text-center">View Passengers</h1>
+                <div class="col col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3 col-xxl-3" *ngFor="let i of passenger.data">
+                    <div class="card" style="width: 18rem;">
+                        <img src="{{i.airline[0].logo}}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">{{i.name}}</h5>
+                          <p class="card-text"><b> No.of Trip:</b>{{i.trips}}</p>
+                          <p class="card-text"><b>AirlineName:</b>{{i.airline[0].name}}</p>
+                          <p class="card-text"><b>Country:</b>{{i.airline[0].country}}</p>
+                          <p class="card-text"><b>Slogan:</b>{{i.airline[0].slogan}}</p>
+                        
+                          <a href="{{i.airline[0].website}}" class="btn btn-outline-primary" target="_blank">website</a>
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
