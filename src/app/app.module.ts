@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { RouterModule } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -11,6 +11,39 @@ import { ProductListComponent } from './product-list/product-list.component';
 import { UserDataComponent } from './user-data/user-data.component';
 import { ToDoComponent } from './to-do/to-do.component';
 import { QuotesAppComponent } from './quotes-app/quotes-app.component';
+import { NavigationComponent } from './navigation/navigation.component';
+
+const myRoute:Routes=[
+  {
+    path:"",
+    component:PassengerComponent
+  },
+  {
+    path:"product",
+    component:ProductListComponent
+  },
+  {
+    path:"public",
+    component:PublicDataComponent
+  },
+  {
+    path:"todo",
+    component:ToDoComponent
+  },
+  {
+    path:"quotes",
+    component:QuotesAppComponent
+  },
+  {
+    path:"userdata",
+    component:UserDataComponent
+  },
+  {
+    path:"userinfo",
+    component:UserInfoComponent
+  }
+
+]
 
 @NgModule({
   declarations: [
@@ -21,11 +54,13 @@ import { QuotesAppComponent } from './quotes-app/quotes-app.component';
     ProductListComponent,
     UserDataComponent,
     ToDoComponent,
-    QuotesAppComponent
+    QuotesAppComponent,
+    NavigationComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RouterModule.forRoot(myRoute)
   ],
   providers: [],
   bootstrap: [AppComponent]
