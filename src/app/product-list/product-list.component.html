@@ -1,0 +1,29 @@
+
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+            <div class="row g-3">
+                <h2 class="text-center mt-3">Collections</h2>
+                <div class="col col-12 col-sm-6 col-md-4 col-lg-63 col-xl-3 col-xxl-3" *ngFor="let i of shop.products">
+                    <div class="card" style="width: 18rem;">
+                        <img height="200px" src="{{i.images[0]}}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 style="height:50px;overflow-y:hidden;" class="card-title">{{i.title}}</h5>
+                          <p style="height:80px;overflow-y:hidden;" class="card-text">{{i.description}}</p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                          <li class="list-group-item"><b>Price:</b>{{i.price}}</li>
+                          <li class="list-group-item"><b>Brand:</b>{{i.brand}}</li>
+                          <li class="list-group-item"><b>Rating:</b>{{i.rating}}</li>
+                          <li class="list-group-item"><b>Stock Left: </b>{{i.stock}}</li>
+                          <li class="list-group-item"><b>Category: </b>{{i.category}}</li>
+                        </ul>
+                        <div class="card-body">
+                          <a href="#" class="btn btn-outline-success">Buy Now</a>
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
