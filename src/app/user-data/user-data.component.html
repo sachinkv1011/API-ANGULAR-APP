@@ -1,0 +1,30 @@
+
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+            <div class="row g-3 mt-3">
+                <h2 class="text-center mt-3">Bio Data</h2>
+                <div class="col col-12 col-sm-6 col-md-4 col-lg-63 col-xl-3 col-xxl-3" *ngFor="let i of user.users">
+                    <div class="card" style="width: 18rem;">
+                        <img height="200px" src="{{i.image}}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 style="height:50px;overflow-y:hidden;" class="card-title">{{i.firstName}}</h5>
+                          <p style="height:80px;overflow-y:hidden;" class="card-text">Age:{{i.age}}</p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                          <li class="list-group-item"><b>Gender:</b>{{i.gender}}</li>
+                          <li class="list-group-item"><b>Email:</b>{{i.email}}</li>
+                          <li class="list-group-item"><b>Phone:</b>{{i.phone}}</li>
+                          <li class="list-group-item"><b>User name: </b>{{i.username}}</li>
+                          <li class="list-group-item"><b>Password: </b>{{i.password}}</li>
+                          <li class="list-group-item"><b>Domain: </b>{{i.domain}}</li>
+                        </ul>
+                        <div class="card-body">
+                         
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
