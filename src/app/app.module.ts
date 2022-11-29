@@ -10,6 +10,7 @@ import { UserInfoComponent } from './user-info/user-info.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { UserDataComponent } from './user-data/user-data.component';
 import { ToDoComponent } from './to-do/to-do.component';
+import { QuotesAppComponent } from './quotes-app/quotes-app.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { ToDoComponent } from './to-do/to-do.component';
     UserInfoComponent,
     ProductListComponent,
     UserDataComponent,
-    ToDoComponent
+    ToDoComponent,
+    QuotesAppComponent
   ],
   imports: [
     BrowserModule,
